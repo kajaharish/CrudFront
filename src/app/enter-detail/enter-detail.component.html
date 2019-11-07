@@ -1,0 +1,32 @@
+<mat-progress-bar
+  *ngIf="flags"
+  mode="indeterminate"
+  color="chill"
+  style="position: absolute; top: 0; z-index: 5000;"
+>
+</mat-progress-bar>
+<!--<p style="text-align: center">Welcome {{name.username}}</p>-->
+
+<div class="example-container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="profileForm">
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" required>
+      <mat-error>
+        {{validateName()}}
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Age" formControlName="age" required>
+    <mat-error>{{validateAge()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Phone Number" formControlName="number" required>
+    <mat-error>{{validatePhone()}}</mat-error>
+  </mat-form-field>
+
+    <button mat-button style="background-color: #888888" >Submit</button>
+  </form>
+</div>
+

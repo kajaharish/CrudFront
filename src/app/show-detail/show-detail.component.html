@@ -1,0 +1,20 @@
+<br>
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <th>{{detail.name}}</th>
+      <th>{{detail.age}}</th>
+      <th>{{detail.number}}</th>
+    </tr>
+  </table>
+
+  <nav class="navbar" *ngIf="detail">
+    <a (click)="edit()"> Edit Data </a> &nbsp;
+    <a (click)="delete()"> Delete Data </a>&nbsp;
+    <a (click)="deleteUser()"> Delete Account </a>
+  </nav>
+

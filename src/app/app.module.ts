@@ -8,11 +8,15 @@ import { ShowDetailComponent } from './show-detail/show-detail.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatSelectModule} from "@angular/material/select";
-import {MatInputModule} from "@angular/material/input";
-import {MatButtonModule} from "@angular/material/button";
 
+import {MatButtonModule} from "@angular/material/button";
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginComponent } from './login/login.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatChipsModule} from "@angular/material/chips";
+import {FormService} from "./form.service";
+import {HttpClientModule} from "@angular/common/http";
+import {MatSnackBarModule,MatSnackBar, MatFormFieldModule, MatSelectModule, MatCheckboxModule, MatInputModule, } from '@angular/material';
 
 
 @NgModule({
@@ -20,6 +24,8 @@ import {MatButtonModule} from "@angular/material/button";
     AppComponent,
     EnterDetailComponent,
     ShowDetailComponent,
+    SignUpComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -30,9 +36,15 @@ import {MatButtonModule} from "@angular/material/button";
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonModule,
+    MatButtonModule,MatSnackBarModule,
+    MatProgressBarModule,
+    MatChipsModule,
+    HttpClientModule,
+
+
+
   ],
-  providers: [],
+  providers: [FormService, LoginComponent,AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

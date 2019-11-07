@@ -3,9 +3,22 @@
 </div>
 <hr>
 
-<nav class="navbar">
-  <a routerLink="/insert"> Insert Details </a> &nbsp;
-  <a routerLink="/fetch"> Fetch Details </a>
-</nav>
+
+<div class="navbar" *ngIf="flag">
+  <mat-chip-list  >
+    <mat-chip color="primary" selected routerLink="login" > Login  </mat-chip>
+    <mat-chip color="accent" selected routerLink="signup"> Sign Up</mat-chip>
+  </mat-chip-list>
+</div>
+
+
+<div class="navbar1" *ngIf="flag2">
+  <mat-chip-list  >
+    <mat-chip color="primary" selected routerLink="insert" > Insert Details</mat-chip>
+    <mat-chip color="accent" selected routerLink="fetch"> Fetch Details </mat-chip>
+  </mat-chip-list>
+</div>
 <!--<mat-slider min="1" max="100" step="1" value="1"></mat-slider>-->
 <router-outlet></router-outlet>
+
+
