@@ -49,10 +49,10 @@ export class LoginComponent implements OnInit {
     // debugger;
     this.formservice.authenticateUser(this.loginform.value)
       .then(result=>{
-        window.localStorage.setItem('username', result.username);
+        window.localStorage.setItem('username','asd' /*result.username*/);
         this.router.navigate(['/insert']);
 
-        this.openSnackBar("Login successfull, Welcome "+result.username, "Dismiss");
+        this.openSnackBar("Login successfull, Welcome "+result/*.username*/, "Dismiss");
         this.appComponent.flag = false;
         this.appComponent.flag2 = true;
       })
