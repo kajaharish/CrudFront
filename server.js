@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000;
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017";
+const url = "mongodb://mongo:27017/testDb";
 
 const cors = require('cors');
 
@@ -15,7 +15,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, db) {
+
+
+MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology:true}, function (err, db) {
   if (err) throw err;
   console.log("Database created!");
   dbo = db.db('testDb');
