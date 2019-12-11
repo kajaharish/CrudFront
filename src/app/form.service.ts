@@ -12,9 +12,9 @@ export class FormService {
   flag1 = false;
   username ;
   saveUser(data) {
-    return this.http.post(`${this.url}/signup123`,data)
-      .toPromise();
     this.flag1 =true;
+    return this.http.post(`${this.url}/signup123`,data).toPromise();
+
 
   }
   authenticateUser(data1){
