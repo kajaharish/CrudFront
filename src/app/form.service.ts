@@ -20,6 +20,7 @@ export class FormService {
   authenticateUser(data1){
     // debugger
     // console.log("Insider authenticate user funciton");
+    alert("inside formservice");
     return this.http.post( `${this.url}/login`,data1).toPromise();
 
   }
