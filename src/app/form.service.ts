@@ -10,9 +10,10 @@ export class FormService {
   url = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
   flag1 = false;
-  username ;
+
   saveUser(data) {
     this.flag1 =true;
+    alert("inside formservice");
     return this.http.post(`${this.url}/signup123`,data).toPromise();
 
 
@@ -20,7 +21,7 @@ export class FormService {
   authenticateUser(data1){
     // debugger
     // console.log("Insider authenticate user funciton");
-    alert("inside formservice");
+
     return this.http.post( `${this.url}/login`,data1).toPromise();
 
   }
