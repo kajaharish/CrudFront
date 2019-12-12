@@ -47,7 +47,7 @@ export class SignUpComponent implements OnInit {
         .then(() => {
 
           this.router.navigate(['/login']);
-          this.openSnackBar("Registeration done!!", "Dismiss");
+          this.openSnackBar("Registeration done", "Dismiss");
         })
 
         .catch(err => alert(err));
