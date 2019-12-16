@@ -7,7 +7,7 @@ import {FormService} from "./form.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'Crud Operations';
+  title = 'Crud ';
 
   flag:boolean;
   flag2:boolean;
