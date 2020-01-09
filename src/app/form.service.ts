@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {debug} from "util";
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class FormService {
   statuscode = 200;
   url = 'http://localhost:3000';
@@ -27,7 +27,7 @@ export class FormService {
   }
 
   deleteUser(passId){
-    console.warn(passId);
+    console.log(passId);
     return this.http.delete(`${this.url}/delete?id=${passId}`).toPromise();
   }
 }

@@ -51,6 +51,7 @@ export class ShowDetailComponent implements OnInit {
 
   this.openSnackBar("User has been deleted","Dismiss");
   this.username = window.localStorage.getItem('username');
+  console.log("from component:"+this.username);
     this.formservice.deleteUser(this.username)
       .then(result=>{
 
