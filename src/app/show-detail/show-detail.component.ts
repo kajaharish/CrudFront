@@ -60,8 +60,10 @@ export class ShowDetailComponent implements OnInit {
       .catch(
         err => this.openSnackBar("User Deletion failed", "Dismiss")
       );
+    window.localStorage.clear();
     this.appComponent.flag = true;
     this.appComponent.flag2 = false;
   this.router.navigateByUrl('/signup')
+
   }
 }

@@ -15,8 +15,6 @@ export class FormService {
     this.flag1 =true;
     // alert("inside formservice");
     return this.http.post(`${this.url}/signup123`,data).toPromise();
-
-
   }
   authenticateUser(data1){
     // debugger

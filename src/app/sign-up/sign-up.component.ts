@@ -42,15 +42,13 @@ export class SignUpComponent implements OnInit {
     //   this.router.navigate(['/login']);
     // }
     if (this.signupform.valid) {
-      this.formService.saveUser(this.signupform.value)
-
-        .then(() => {
+      this.formService.saveUser(this.signupform.value).then(() => {
 
           this.router.navigate(['/login']);
           this.openSnackBar("Registeration done", "Dismiss");
         })
 
-        .catch(err => alert(err));
+        .catch(err => console.log(err));
 
     }
   }
